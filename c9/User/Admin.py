@@ -1,6 +1,6 @@
-import User
+from User import User as User
 
-class Admin(User.User):
+class Admin(User):
 
     def __init__(self, first_name, last_name, dateof_birth):
         super().__init__(first_name, last_name, dateof_birth)

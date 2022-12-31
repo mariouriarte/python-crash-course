@@ -20,6 +20,7 @@ class User:
     def show_privileges(self):
         print(self.roles)
 
-# mario = User('Mario', 'Uriarte', '1984-11-14')
-# mario.describe_user()
-# mario.greet_user()
+mario = User('Baguera', 'Gatuso', '2015-11-14')
+mario.describe_user()
+mario.greet_user()
+mario.show_privileges()

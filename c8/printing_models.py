@@ -1,3 +1,5 @@
+from random import choice
+
 def print_models(unprinted_designs, completed_models):
     """
     Simulate printing each design, until none are left.
@@ -16,6 +18,11 @@ def show_completed_models(completed_models):
     for completed_model in completed_models:
         print(completed_model)
 
+def print_random(completed_models):
+    item = choice(completed_models)
+    print(f'Selected {item}')
+
+
 # Start with some designs that need to be printed.
 unprinted_designs = ['phone case', 'robot pendant', 'dodecahedron']
 completed_models = []
@@ -25,3 +32,5 @@ print_models(unprinted_designs[:], completed_models)
 show_completed_models(completed_models)
 
 print(unprinted_designs)
+
+print_random(completed_models)
