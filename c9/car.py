@@ -28,15 +28,15 @@ class Car:
         print("ok, do it")
 
 
-# my_new_car = Car('audi', 'a4', 2024)
+my_new_car = Car('audi', 'a4', 2024)
 
-# print(my_new_car.get_descriptive_name())
+print(my_new_car.get_descriptive_name())
 
-# my_new_car.odometer_reading = 25
-# my_new_car.read_odometer()
+my_new_car.odometer_reading = 25
+my_new_car.read_odometer()
+x
+my_new_car.update_odometer(1)
+my_new_car.read_odometer()
 
-# my_new_car.update_odometer(1)
-# my_new_car.read_odometer()
-
-# my_new_car.increment_odometer(2)
-# my_new_car.read_odometer()
+my_new_car.increment_odometer(2)
+my_new_car.read_odometer()
