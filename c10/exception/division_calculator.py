@@ -1,7 +1,5 @@
 def is_number(number):
-    try:
-        int(number)
-    except ValueError:
+    if not number.isnumeric():
         raise ValueError(f'"{number}" is not a number')
 
 def division(first, second):
