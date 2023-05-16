@@ -4,9 +4,9 @@ class Admin(User):
 
     def __init__(self, first_name, last_name, dateof_birth):
         super().__init__(first_name, last_name, dateof_birth)
-        self.initialize()
+        self._initialize()
 
-    def initialize(self):
+    def _initialize(self):
         roles = ['ROLE_ADD_POST', 'ROLE_DELETE_POST', 'ROLE_BAN_USER']
         for rol in roles:
             self.roles.append(rol)
