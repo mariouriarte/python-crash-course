@@ -14,10 +14,10 @@ class AlienInvasion:
         self.clock = pygame.time.Clock()
         self.settings = Settings()
 
-        self.screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
-        self.settings.screen_width = self.screen.get_rect().width
-        self.settings.screen_height = self.screen.get_rect().height
-        # self.screen = pygame.display.set_mode((self.settings.screen_width, self.settings.screen_height))
+        # self.screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
+        # self.settings.screen_width = self.screen.get_rect().width
+        # self.settings.screen_height = self.screen.get_rect().height
+        self.screen = pygame.display.set_mode((self.settings.screen_width, self.settings.screen_height))
         pygame.display.set_caption("Alien Invasion")
 
         self.ship = Ship(self)
@@ -28,7 +28,7 @@ class AlienInvasion:
         while True:
             self._check_events()
             self.ship.update()
-            self.bullets.update()
+            self.update_bullets()
             self._update_screen()
             self.clock.tick(60)
 
@@ -73,8 +73,17 @@ class AlienInvasion:
 
     def _fire_bullet(self):
         '''Create a new Bullet and add it to the bullets group'''
-        new_bullet = Bullet(self)
-        self.bullets.add(new_bullet)
+        if len(self.bullets) < self.settings.bullet_allowed:
+            new_bullet = Bullet(self)
+            self.bullets.add(new_bullet)
+
+    def update_bullets(self):
+        '''Update positions of bullets and get rid of old bullets'''
+        self.bullets.update()
+
+        for bullet in self.bullets.copy():
+            if bullet.rect.bottom <= 0:
+                self.bullets.remove(bullet)
 
 if __name__ == '__main__':
     ai = AlienInvasion()
