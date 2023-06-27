@@ -33,7 +33,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/home/mario/DEV/python/pcc/c18/learning_log/ll_env"
+set -gx VIRTUAL_ENV "/home/mario/DEV/python/python-crash-course/c18/learning_log/ll_env"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH

@@ -13,8 +13,12 @@ for value in range(2, 5):
     print(value)
 
 print('rangos 6')
-for value in range(6):
-    print(value)
+for value in range(1,11):
+    print(f'> hola mundo {value}')
+
+# for (i=0; i<5; i++) {
+#     System.out. (i*2)
+# }
 
 numbers = list(range(1, 6))
 print(numbers)
@@ -65,4 +69,3 @@ players.append('mario')
 
 print(players)
 print(players2)
-

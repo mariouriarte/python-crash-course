@@ -2,6 +2,8 @@ message = "Hello world"
 
 print(message)
 
+CONST = 'asd';
+
 variable1 = 1
 vaiable_2 = True
 variableCamelCase = "string is a chain of characters"
