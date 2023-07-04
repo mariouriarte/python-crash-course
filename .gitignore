@@ -1,2 +1,26 @@
 .idea/
 *__pycache*
+# Visual Studio Code # 
+.vscode/*
+.history
+
+# Django #
+*.log
+*.pot
+*.pyc
+__pycache__
+media
+
+# Python # 
+*.py[cod] 
+*$py.class 
+
+# Environments 
+.env 
+.venv 
+env/ 
+ll_env/
+venv/ 
+ENV/ 
+env.bak/ 
+venv.bak/ 
