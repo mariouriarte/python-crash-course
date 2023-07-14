@@ -13,4 +13,8 @@ urlpatterns = [
     path('topics/<int:topic_id>/', views.topic, name='topic'),
     # Page for adding a new topic.
     path('topics/new', views.new_topic, name='new_topic'),
+    # Page for adding a new entry.
+    path('entry/new/<int:topic_id>/', views.new_entry, name='new_entry'),
+    # Page for editing an entry.
+    path('entry/edit/<int:entry_id>/', views.edit_entry, name='edit_entry'),
 ]
