@@ -1,7 +1,10 @@
 import matplotlib.pyplot as plt
+from pprint import pprint
 
 input_values = [1, 2, 3, 4, 5]
 squares = [1, 4, 9, 16, 25]
+pprint(plt.style.available)
+plt.style.use('tableau-colorblind10')
 
 fig, ax = plt.subplots()
 ax.plot(input_values, squares, linewidth=3)
