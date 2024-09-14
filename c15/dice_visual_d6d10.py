@@ -27,5 +27,5 @@ if __name__ == "__main__":
     fig = px.bar(x=poss_results, y=frequencies, title=title, labels=labels)
     # Further customize chart.
     fig.update_layout(xaxis_dtick=1)
-    # fig.show()
-    fig.write_html('dice_visual_d6d10.html')
+    fig.show()
+    # fig.write_html('dice_visual_d6d10.html')
